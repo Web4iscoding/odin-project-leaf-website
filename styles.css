@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('./fonts/norse-bold-webfont.woff2') format('woff2'),
+         url('./fonts/norse-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --left: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0.625;
+    /* border: 1px solid red; */
+    line-height: 1.5;
+}
+
+html {
+    height: 100vh;
+}
+
+body {
+    height: inherit;
+    display: flex;
+}
+
+body > div:first-of-type {
+    flex: 1;
+    flex-basis: 15vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    margin-top: 30%;
+    text-align: center;
+    background-color: black;
+    opacity: 0.7;
+    /* background-image: url("./img/odin-lined.png"); */
+    background-repeat: no-repeat;
+    background-size: 18%;
+    background-position: 30%;
+}
+
+.logo span {
+    display: inline-block;
+    font-family: 'norsebold';
+    color: white;
+    font-size: calc(3rem + 3vw);
+}
+
+img {
+    display: inline-block;
+}
+
+.panel {
+    background-image: url("./img/halie-west-25xggax4bSA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.logo + div {
+    position: absolute;
+    bottom: 1%;
+    text-align: center;
+    width: 100%;
+    font-size: 0.8rem;
+    color: white
+}
+
+.main {
+    flex: 2;
+    display: flex;
+    font-size: calc(0.4rem + 1vw);
+    flex-direction: column;
+    font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.details {
+    flex: 1.4;
+    padding-right: 14%;
+    padding-left: var(--left);
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.details > p {
+    position: relative;
+    top: 37%;
+}
+
+.details p:nth-child(2) {
+    position: relative;
+    margin-top: 2%;
+}
+
+.form {
+    flex: 1.2 1 3vh;
+    box-shadow: 0 4px 10px -2px rgb(154, 154, 154);
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--left);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.form > p {
+    flex: 1;
+    display: flex;
+    font-weight: bold;
+}
+
+.footer {
+    padding-top: 5%;
+    padding-left: var(--left);
+    flex: 1;
+}
+
+button {
+    display: block;
+}
+
+form {
+    height: 100%;
+    flex: 5;
+}
+
+form > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container {
+    display: flex;
+    gap: 5vw;
+}
+
+label {
+    letter-spacing: 2px;
+}
+
+.container div {
+    color: rgb(62, 62, 62);
+    font-size: calc(0.2rem + 0.7vw);
+    display: inline-block;
+}
+
+input {
+    appearance: none;
+    display: block;
+    width: calc(10px + 15vw);
+    height: calc(15px + 2vh);
+    border-radius: 8px;
+    border: 0.4px solid #E5E7EB;
+    margin: 0;
+    padding-left: 5%;
+    font-size: inherit;
+}
+
+input:focus {
+    border: 1.2px solid blue;
+    box-shadow: 1px 1px 4px rgb(188, 188, 188);
+    outline: none;
+}
+
+input:invalid {
+    border: 1.2px solid red;
+}
+
+input[type="email"]:invalid + span:before {
+    content: "* Please enter a valid email address";
+    color: red;
+    font-size: calc(0.3rem + 0.4vw);
+    position: absolute;
+}
+
+button {
+    border: none;
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    color: white;
+    font-size: 80%;
+    border-radius: 8px;
+    background-color: #596D48;
+    margin-bottom: 30px;
+}
+
+button + span {
+    font-size: calc(0.5rem + 0.4vw);
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+    color: #596D48;
+}
+
+img {
+    height: 100%;
+    padding: 15px;
+}
